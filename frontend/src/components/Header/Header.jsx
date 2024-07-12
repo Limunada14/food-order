@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import classes from './heade.module.css';
+import classes from './header.module.css';
 
 function Header() {
   const user = {
