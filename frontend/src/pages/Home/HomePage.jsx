@@ -4,6 +4,7 @@ import { getAll, getAllByTag, getAllTags, search } from '../../services/foodServ
 import Thumbnails from '../../components/Thumbnails/Thumbnails';
 import Search from '../../components/Search/Search';
 import Tags from '../../components/Tags/Tags';
+import NotFound from '../../components/NotFound/NotFound';
 
 const initialState = { foods: [], tags: [] };
 
@@ -35,6 +36,7 @@ function HomePage() {
     <>
       <Search />
       <Tags tags={tags} />
+      {foods.length === 0 && <NotFound linkText="Reset Search" />}
       <Thumbnails foods={foods} />
     </>
   );

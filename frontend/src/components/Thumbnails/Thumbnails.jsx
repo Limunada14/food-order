@@ -9,7 +9,7 @@ function Thumbnails({ foods }) {
       {foods.map((food) => (
         <li key={food.id}>
           <Link to={`/food/${food.id}`}>
-            <img className={classes.img} src={`/foods/${food.imageUrl}`} alt={foods.name} />
+            <img className={classes.img} src={`${food.imageUrl}`} alt={foods.name} />
           </Link>
           <div className={classes.content}>
             <div className={classes.name}>{food.name}</div>
